@@ -20,6 +20,7 @@
 2. 所有工具、镜像、脚本**必须放在同一目录**
 
 ### 标准文件结构
+```
 Flash_Folder/
 ├── adb.exe
 ├── fastboot.exe
@@ -44,7 +45,7 @@ Flash_Folder/
 ├── super.img.11
 ├── super.img.12
 └── super.img.13
-
+```
 ---
 
 ## 🛠 Fastboot 常用命令速查表
