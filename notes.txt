@@ -1,0 +1,21 @@
+小米10S 国行澎湃OS 跨刷欧版 关键注意事项
+
+1. 目录硬性要求
+- 所有工具、镜像、脚本必须放在同一个文件夹
+- 文件夹完整路径禁止：中文、空格、特殊符号
+
+2. Super分卷文件名（务必一致）
+super.img.000
+super.img.001
+super.img.002
+···
+super.img.13
+
+3. 关键操作
+- 必须解锁Bootloader
+- 跨版本刷机必须执行 erase userdata
+- 无限卡TWRP：格式化Data分区（输入yes）
+
+4. 报错处理
+- android-info.txt 缺失：更换 Fastboot 线刷包
+- GetVar 错误：禁用 format data，使用 erase userdata
