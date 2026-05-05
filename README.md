@@ -46,6 +46,7 @@ Flash_Folder/
 ├── super.img.12
 └── super.img.13
 ```
+
 ---
 
 ## 🛠 Fastboot 常用命令速查表
@@ -91,6 +92,7 @@ fastboot flash super super.img.13
 # 清除数据 & 重启
 fastboot erase userdata
 fastboot reboot
+```
 
 ---
 
@@ -102,7 +104,7 @@ fastboot reboot
 - 运行一键刷机脚本，或手动输入 Fastboot 命令刷写
 - 全部分区与 super 分卷刷写完成后，自动清除用户数据
 - 若开机无限循环进入 TWRP：
-  进入 TWRP → 清除 → 格式化 Data → 输入 `yes` 确认执行
+ 进入 TWRP → 清除 → 格式化 Data → 输入 `yes` 确认执行
 
 ---
 
