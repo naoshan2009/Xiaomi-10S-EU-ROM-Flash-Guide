@@ -91,3 +91,33 @@ fastboot flash super super.img.13
 # 清除数据 & 重启
 fastboot erase userdata
 fastboot reboot
+
+## 📖 完整刷机流程
+- 设备提前解锁 Bootloader
+- 关机状态下，长按「音量下 + 电源」进入 Fastboot 模式
+- 手机连接电脑后置 USB 接口，保证连接稳定
+- 将所有工具、镜像、脚本统一放入规范目录
+- 运行一键刷机脚本，或手动输入 Fastboot 命令刷写
+- 全部分区与 super 分卷刷写完成后，自动清除用户数据
+- 若开机无限循环进入 TWRP：
+  进入 TWRP → 清除 → 格式化 Data → 输入 `yes` 确认执行
+
+## ⚠️ 常见报错与解决方案
+1. **archive does not contain 'android-info.txt'**
+   - 原因：误用 OTA 卡刷包
+   - 解决：更换完整官方 Fastboot 线刷包
+
+2. **GetVar Variable Not found**
+   - 禁止使用 `fastboot format data`
+   - 统一使用标准命令：`fastboot erase userdata`
+
+3. **无法加载镜像文件**
+   - 检查项：目录是否统一、路径是否含中文、分卷文件名是否完全一致
+
+4. **开机自动进入 TWRP / 分区加密失败**
+   - 跨地区、跨大版本刷机必须手动格式化 Data 分区
+
+## ⚖️ 免责声明
+本项目仅为个人实操经验整理，包含线刷教程与批处理脚本。
+仓库不附带任何固件、镜像、破解类文件，完全合规开源。
+刷机存在硬件风险与数据丢失风险，所有操作由使用者自行承担后果。
