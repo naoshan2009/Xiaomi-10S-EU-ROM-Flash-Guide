@@ -92,6 +92,8 @@ fastboot flash super super.img.13
 fastboot erase userdata
 fastboot reboot
 
+---
+
 ## 📖 完整刷机流程
 - 设备提前解锁 Bootloader
 - 关机状态下，长按「音量下 + 电源」进入 Fastboot 模式
@@ -101,6 +103,8 @@ fastboot reboot
 - 全部分区与 super 分卷刷写完成后，自动清除用户数据
 - 若开机无限循环进入 TWRP：
   进入 TWRP → 清除 → 格式化 Data → 输入 `yes` 确认执行
+
+---
 
 ## ⚠️ 常见报错与解决方案
 1. **archive does not contain 'android-info.txt'**
@@ -117,7 +121,11 @@ fastboot reboot
 4. **开机自动进入 TWRP / 分区加密失败**
    - 跨地区、跨大版本刷机必须手动格式化 Data 分区
 
+---
+
 ## ⚖️ 免责声明
 本项目仅为个人实操经验整理，包含线刷教程与批处理脚本。
 仓库不附带任何固件、镜像、破解类文件，完全合规开源。
 刷机存在硬件风险与数据丢失风险，所有操作由使用者自行承担后果。
+
+---
